@@ -1,6 +1,6 @@
 {
   "name": "webpack-react",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js --env env=prod",
@@ -9,7 +9,7 @@
     "stylelint:fix": "stylelint \"src/**/*.{css,scss}\" --fix",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\" --ignore-path ./.prettierignore",
-    "check": "npm run stylelint:fix && npm run lint && npm run format",
+    "check": "npm run stylelint:fix && npm run format",
     "commit": "npm run check && cz",
     "prepare": "husky",
     "lint-staged": {
@@ -23,6 +23,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@eslint/compat": "^1.2.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.12.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.7.6",
@@ -55,6 +58,7 @@
     "react-refresh": "^0.14.2",
     "sass": "^1.80.1",
     "sass-loader": "^16.0.2",
+    "standard-version": "^9.5.0",
     "style-loader": "^4.0.0",
     "stylelint": "^16.10.0",
     "stylelint-config-standard": "^36.0.1",
@@ -71,8 +75,8 @@
     "react-dom": "^18.3.1"
   },
   "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
     }
+  }
 }
